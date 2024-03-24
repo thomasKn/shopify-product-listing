@@ -1,5 +1,9 @@
 # Hydrogen + Vite playground
 
+<a href="https://shopify-product-listing.vercel.app" target="_blank">
+Live demo app
+</a>
+
 ## Getting started
 
 ```shellscript
