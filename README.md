@@ -1,36 +1,38 @@
-# Welcome to Remix + Vite!
+# Hydrogen + Vite playground
 
-📖 See the [Remix docs](https://remix.run/docs) and the [Remix Vite docs](https://remix.run/docs/en/main/future/vite) for details on supported features.
-
-## Development
-
-Run the Vite dev server:
+## Getting started
 
 ```shellscript
-npm run dev
+pnpm install
+pnpm run dev
 ```
 
-## Deployment
+## Technologies
 
-First, build your app for production:
+### Remix + Vite
 
-```sh
-npm run build
-```
+This app has been built with Remix to be as close to an original Hydrogen app as possible. Vite is also used to speed up the build process.
 
-Then run the app in production mode:
+### Hydrogen
 
-```sh
-npm start
-```
+Hydrogen is used for generating Shopify types but also to import components such as `<Image />` or `<Money />`.
 
-Now you'll need to pick a host to deploy it to.
+### Radix UI + shadcn/ui
 
-### DIY
+Radix UI is used along with shadcn/ui to implement the UI and make sure components are accessible across the app.
 
-If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
+### Tailwind CSS
 
-Make sure to deploy the output of `npm run build`
+Tailwind CSS is used to style the app.
 
-- `build/server`
-- `build/client`
+### Development Assumptions
+
+This app is for demo purposes. It is not intended to be used in production.
+
+For the sake of the demo, this app mocks an API call to dynamically fetch Shopify products.
+
+Product filtering, pagination, sorting and search are implemented in the server side. In a real world scenario, these functionnalities would be managed with Shopify GraphQL queries.
+
+States are stored in the url and persisted between page loads.
+
+The Infinite Scrolling functionnality uses an artificial delay of 1 seconds to simulate a real world scenario.
